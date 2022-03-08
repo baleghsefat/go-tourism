@@ -36,7 +36,7 @@ func Store(context echo.Context) (err error) {
 
 	UserModel.CreateUser(&newUser)
 
-	return context.JSON(http.StatusOK, newUser)
+	return context.JSON(http.StatusCreated, newUser)
 }
 
 func Update(context echo.Context) error {
